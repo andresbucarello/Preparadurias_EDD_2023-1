@@ -119,4 +119,36 @@ public class PilaG<T> {
         }
         return printStack;
     }
+    
+    // No se si funciona ---- pilas y colas 30:20 
+    public void insertar(T data,int pos,int i){
+       if(i < pos){
+           NodoG<T> nodo = this.top;
+           this.pop();
+           this.insertar(data, pos, i + 1);
+           this.push((NodoG<T>) nodo.getElemento());
+       }else{
+           this.push((NodoG<T>) data);
+       }
+   }
+ 
+    public void submerge(T data){
+       if(!this.esVacio()){
+           NodoG<T> nodo = this.top;
+           this.pop();
+           this.submerge(data);
+           this.push((NodoG<T>) nodo.getElemento());
+       }else{
+           this.push((NodoG<T>) data);
+       }
+   }
+    
+    public void reverse(){
+        if(!this.esVacio()){
+            NodoG<T> nodo = this.top;
+            this.pop();
+            this.reverse();
+            this.submerge(nodo.getElemento()); // No se si funciona ---- pilas y colas 39:13 
+        }
+    }
 }

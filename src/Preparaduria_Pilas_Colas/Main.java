@@ -8,24 +8,36 @@ import javax.swing.JOptionPane;
 public class Main {
 
     public static void main(String[] args) {
-        Pila pila = new Pila();
-        
-        Nodo nuevo1=new Nodo(1);
-        pila.push(nuevo1);
-        
-        Nodo nuevo2=new Nodo(2);
-        pila.push(nuevo2);
-        
-        Nodo nuevo3=new Nodo(3);
-        pila.push(nuevo3);
-        
-        Nodo nuevo4=new Nodo(4);
-        pila.push(nuevo4);
-        
-        String printStack = "";
-        int contador = 1;
-        String pila_completa = pila.print(printStack,contador);
+//        Pila pila = new Pila();
+//        
+//        Nodo nuevo1=new Nodo(1);
+//        pila.push(nuevo1);
+//        
+//        Nodo nuevo2=new Nodo(2);
+//        pila.push(nuevo2);
+//        
+//        Nodo nuevo3=new Nodo(3);
+//        pila.push(nuevo3);
+//        
+//        Nodo nuevo4=new Nodo(4);
+//        pila.push(nuevo4);
+//        
+//        String printStack = "";
+//        int contador = 1;
+//        String pila_completa = pila.print(printStack,contador);
+//
+//        JOptionPane.showMessageDialog(null,pila_completa);
 
-        JOptionPane.showMessageDialog(null,pila_completa);
+        Pila2 pila = new Pila2();
+        pila.apilar(4);
+        pila.apilar(3);
+        pila.apilar(2);
+        pila.apilar(1);
+        
+        pila.imprimir();
+        
+        pila.eliminarMedio(pila, 3, 0);
+        
+        pila.imprimir();
     }
 }
