@@ -64,6 +64,34 @@ public class Pila2{
         tamanio++;
     }
     
+    public int buscarMax(){
+        int primero = (Integer) leerTop();
+        return buscarMaxOrLower(primero,true);
+    }
+    
+    public int buscarMin(){
+        int primero = (Integer) leerTop();
+        return buscarMaxOrLower(primero,false);
+    }
+    
+    private int buscarMaxOrLower(int primero,boolean higher){
+        int num , max;
+        max = primero;
+        if(!esVacio()){
+            num = (Integer) leerTop();
+            desapilar();
+            if(higher && num > max){
+                max = num;
+            }else if(!higher && num < max){
+                max = num;
+            }
+            max = buscarMaxOrLower(max,higher);
+            
+            apilar(num);
+        }
+        return max;
+    }
+    
     public void imprimir(){
         if(esVacio() == false){
             Nodo aux = top;

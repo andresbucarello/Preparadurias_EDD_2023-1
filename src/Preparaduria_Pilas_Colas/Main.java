@@ -29,15 +29,18 @@ public class Main {
 //        JOptionPane.showMessageDialog(null,pila_completa);
 
         Pila2 pila = new Pila2();
-        pila.apilar(4);
-        pila.apilar(3);
-        pila.apilar(2);
-        pila.apilar(1);
+        pila.apilar(12);
+        pila.apilar(9);
+        pila.apilar(99);
+        pila.apilar(99990009);
         
         pila.imprimir();
         
         pila.eliminarMedio(pila, 3, 0);
         
         pila.imprimir();
+        
+        System.out.println(pila.buscarMax());
+        System.out.println(pila.buscarMin());
     }
 }

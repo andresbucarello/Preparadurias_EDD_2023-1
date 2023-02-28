@@ -38,7 +38,7 @@ public class MainG {
         cola.encolar(4);
         
         System.out.println(cola.printCola());
-        cola.sortAsc();
+        cola.sortAscendent();
         System.out.println(cola.printCola());
     }
 

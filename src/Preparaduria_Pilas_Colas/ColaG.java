@@ -57,7 +57,7 @@ public class ColaG<T> {
     public int getLower() {
         return this.getHigherOrLower(false);
     }
-
+    
     private int getHigherOrLower(boolean higher) {
         int numero = (Integer) this.cabeza.getElemento();
         for (int i = 0; i < this.tamanio - 2; i++) {
